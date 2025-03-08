@@ -17,9 +17,9 @@ data_parser = sl.DataFrameParser(
 )
 
 data_loader_config = sl.DataLoaderConfig(
-    "https://drive.google.com/uc?export=download&id=1E5sRckPUn6-qce7P1tLrruTQFL-5BU3G",
-    sl.DataFormat.CSV,
-    pandas_read_kwargs={"chunksize": 10000}
+    "https://raw.githubusercontent.com/fahmiaziz98/ramadhan2025/refs/heads/main/backend/hadith/data/data_hadith.jsonl",
+    sl.DataFormat.JSON,
+    pandas_read_kwargs={"lines": True, "chunksize": 100},
 )
 
 source = sl.RestSource(index.hadist)
