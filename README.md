@@ -41,6 +41,19 @@ pip install -r requirements.txt
 - Sign up and create a Qdrant cluster to store and retrieve vectorized Hadith data.
 - Get your API key and URL from [Qdrant docs](https://qdrant.tech/documentation/cloud/create-cluster/).
 ---
+## Copy .env.example to .env
+```bash
+cp .env.example .env
+```
+Then, edit the `.env` file according to the required configuration.
+
+If using Windows (Command Prompt), you can use:
+
+```bash
+copy .env.example .env
+```
+
+---
 
 ## 🐳 Docker Setup
 
