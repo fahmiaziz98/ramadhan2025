@@ -11,10 +11,8 @@ logger = setup_logger()
 
 
 def get_hadith_data(query: str) -> str:
-    """Retrieves Hadith data using the appropriate tools when a user inquires about Hadith.
-
-    This function processes the user's query and utilizes available tools
-    to fetch relevant Hadith information, such as Hadith number, source, and content.
+    """
+    Retrieves Hadith data using the appropriate tools when a user inquires about Hadith.
 
     Args:
         query (str): User query.
@@ -72,6 +70,15 @@ def get_hadith_data(query: str) -> str:
         raise Exception(f"Request failed with status code {response.status_code}")
 
 def get_quran_data(query: str) -> str:
+    """
+    Retrieves Quran data using the appropriate tools when a user inquires about Quran.
+
+    Args:
+        query (str): User query.
+
+    Returns:
+        str: A markdown-formatted string containing the retrieved Hadith information.
+    """
     llm = LLMOutputParser(type="quran")
     output = llm.generate(query)
     logger.info(query)
