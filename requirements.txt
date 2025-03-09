@@ -1,12 +1,5 @@
-superlinked
-superlinked-server
 python-dotenv
-qdrant-client
-datasets 
-loguru>=0.7.3 
-pydantic-settings>=2.6.1
 langchain 
 langchain-google-genai 
+langchain-groq
 google-ai-generativelanguage==0.6.15
-fastapi
-uvicorn[standard]
